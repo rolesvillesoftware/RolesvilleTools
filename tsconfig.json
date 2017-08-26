@@ -3,7 +3,7 @@
       "target": "es5",
       "module": "commonjs",
       "moduleResolution": "node",
-      "sourceMap": true,
+      "sourceMap": false,
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
       "lib": [ "es2015", "dom" ],
@@ -12,11 +12,13 @@
       "typeRoots": [
         "node_modules/@types/"
       ],
+      "rootDir": "src",
       "outDir": "dist"
     },
     "compileOnSave": true,
     "exclude": [
-      "node_modules/*"
+      "node_modules/*",
+      "test/*"
     ]
   }
 

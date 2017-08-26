@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var isNumeric_1 = require("./isNumeric");
 function population(array, field) {
     if (array == null || array.length == 0) {
         return [];
@@ -9,10 +10,12 @@ function population(array, field) {
     var index = -1;
     while (++index < length) {
         if (array[index]) {
-            retArray.push(array[index][field]);
+            var value = field == null ? array[index] : array[index][field];
+            if (isNumeric_1.isNumeric(value)) {
+                retArray.push(parseFloat(value));
+            }
         }
     }
     return retArray;
 }
 exports.population = population;
-//# sourceMappingURL=population.js.map

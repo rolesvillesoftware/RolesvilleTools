@@ -2,7 +2,7 @@
   "name": "rolesvilletools",
   "version": "1.0.0",
   "description": "A tools set utilized by Rolesville Software LLC",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,10 +21,7 @@
     "url": "https://github.com/rolesvillesoftware/RolesvilleTools/issues"
   },
   "homepage": "https://github.com/rolesvillesoftware/RolesvilleTools#readme",
-  "dependencies": {
-    "d3": "^4.10.0",
-    "lodash": "^4.17.4"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/jasmine": "^2.5.54",
     "@types/lodash": "^4.14.74",
