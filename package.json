@@ -1,0 +1,49 @@
+{
+  "name": "rolesvilletools",
+  "version": "1.0.0",
+  "description": "A tools set utilized by Rolesville Software LLC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolesvillesoftware/RolesvilleTools.git"
+  },
+  "keywords": [
+    "Rolesville",
+    "Software",
+    "Tools"
+  ],
+  "author": "Rolesville Software LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rolesvillesoftware/RolesvilleTools/issues"
+  },
+  "homepage": "https://github.com/rolesvillesoftware/RolesvilleTools#readme",
+  "dependencies": {
+    "d3": "^4.10.0",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.5.54",
+    "@types/lodash": "^4.14.74",
+    "browserify": "^14.4.0",
+    "jasmine": "^2.7.0",
+    "jasmine-core": "^2.7.0",
+    "jasmine-node": "^1.14.5",
+    "karma": "^1.7.0",
+    "karma-browserify": "^5.1.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-edge-launcher": "^0.4.1",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-jasmine-matchers": "^3.7.0",
+    "karma-requirejs": "^1.1.0",
+    "karma-typescript": "^3.0.5",
+    "requirejs": "^2.3.4",
+    "typescript": "^2.5.1",
+    "watchify": "^3.9.0"
+  }
+}
