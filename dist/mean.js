@@ -11,4 +11,3 @@ function mean(items, field) {
     meanPopulation.forEach(function (item) { return sum = sum + item; });
     return sum / meanPopulation.length;
 }
-exports.mean = mean;

@@ -1,5 +1,2 @@
-var rsMean = require("./mean");
-var rsPopulation = require("./population");
-
-exports.mean = rsMean; 
-exports.population = rsPopulation; 
+exports.mean = require("./mean").mean; 
+exports.population = require("./population").population;
