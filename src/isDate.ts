@@ -1,3 +1,7 @@
+/**
+ * Checks to see if the variable is a date value
+ * @param date Date|string - input parameter to check if is a date
+ */
 export function isDate(date: Date|string): boolean {
 	let work: Date|string = date; 
 	if (typeof work === 'string') {
