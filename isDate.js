@@ -1,6 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function isDate(date) {
-    return date != null && date instanceof Date && !isNaN(date.valueOf());
+    var work = date;
+    if (typeof work === 'string') {
+        if (work == null || work.length === 0) {
+            work = null;
+        }
+        else {
+            work = new Date(work);
+        }
+    }
+    return work != null && work instanceof Date && !isNaN(work.valueOf());
 }
 exports.isDate = isDate;
