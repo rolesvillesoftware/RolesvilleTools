@@ -13,7 +13,7 @@
         "node_modules/@types/"
       ],
       "rootDir": "src",
-      "outDir": "dist"
+      "outDir": "."
     },
     "compileOnSave": true,
     "exclude": [
