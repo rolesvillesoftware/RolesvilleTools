@@ -7,7 +7,7 @@ module.exports = function (config) {
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       require('karma-ie-launcher'),
-      require('karma-Edge-launcher'),
+      //require('karma-Edge-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-browserify'),
       require('karma-typescript'),
@@ -28,7 +28,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome', 'Edge', 'IE'],
+    browsers: ['Chrome'], //, 'Edge', 'IE'],
     singleRun: false
   });
 };
