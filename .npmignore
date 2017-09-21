@@ -1,6 +1,8 @@
-./**/*.ts
-./test/*
-./src/*
-./tsconfig.json
-./karma.config.js
+.npmignore
+**/*.ts
+test/*
+src/*
+tsconfig.json
+karma.config.js
+coverage/**/*
 
