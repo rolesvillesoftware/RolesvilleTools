@@ -17,32 +17,30 @@ export class SafePromise {
    * @returns {SafeResult<T>} A promise of the original promise returning the SafeResult type.
    * @memberof SafePromise
    */
-  public static run<T>(
-    promise: Promise<T> | (() => Promise<T>)
-  ): Promise<SafeResult<T>> {
+  public static run<T>(promise: () => Promise<T>): Promise<SafeResult<T>> {
     const result = new SafeResult<T>();
     if (typeof promise === "function") {
-      return SafePromise.handlePromise(promise());
-    } else {
       return SafePromise.handlePromise(promise);
+    } else {
+      return Promise.reject("Promise must be in the form of a function for now.")
     }
   }
 
   /**
    * Handles the promise and the results
-   * 
+   *
    * @private
    * @static
-   * @template T 
-   * @param {Promise<T>} promise 
-   * @returns {Promise<SafeResult<T>>} 
+   * @template T
+   * @param {Promise<T>} promise
+   * @returns {Promise<SafeResult<T>>}
    * @memberof SafePromise
    */
-  private static handlePromise<T>(promise: Promise<T>): Promise<SafeResult<T>> {
+  private static handlePromise<T>(promise: () => Promise<T>): Promise<SafeResult<T>> {
     return new Promise<SafeResult<T>>((response, reject) => {
       const result = new SafeResult<T>();
 
-      promise
+      promise()
         .then(value => {
           result.setSuccess(value || ({} as T));
           response(result);

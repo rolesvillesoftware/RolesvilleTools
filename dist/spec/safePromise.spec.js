@@ -14,31 +14,6 @@ describe("SafePromise Tests", function () {
             fail(error);
             done();
         });
-        var testPromise = new Promise(function (response, reject) {
-            response(true);
-        });
-        SafePromise_1.SafePromise.run(testPromise)
-            .then(function (data) {
-            expect(data).toBeDefined();
-            expect(data.isError).toBeFalsy();
-            expect(data.isSuccessful).toBeTruthy();
-            done();
-        })
-            .catch(function (error) {
-            fail(error);
-            done();
-        });
-        SafePromise_1.SafePromise.run(Promise.resolve(true))
-            .then(function (data) {
-            expect(data).toBeDefined();
-            expect(data.isError).toBeFalsy();
-            expect(data.isSuccessful).toBeTruthy();
-            done();
-        })
-            .catch(function (error) {
-            fail(error);
-            done();
-        });
     }, 15000);
     it("Test Failure", function (done) {
         SafePromise_1.SafePromise.run(function () { return Promise.reject("Some Rejection Reason"); })

@@ -7,16 +7,16 @@ var SafePromise = (function () {
     SafePromise.run = function (promise) {
         var result = new SafeResult_1.SafeResult();
         if (typeof promise === "function") {
-            return SafePromise.handlePromise(promise());
+            return SafePromise.handlePromise(promise);
         }
         else {
-            return SafePromise.handlePromise(promise);
+            return Promise.reject("Promise must be in the form of a function for now.");
         }
     };
     SafePromise.handlePromise = function (promise) {
         return new Promise(function (response, reject) {
             var result = new SafeResult_1.SafeResult();
-            promise
+            promise()
                 .then(function (value) {
                 result.setSuccess(value || {});
                 response(result);
