@@ -3,7 +3,32 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var SafePromise_1 = require("../src/SafePromise");
 describe("SafePromise Tests", function () {
     it("Test success", function (done) {
-        SafePromise_1.SafePromise.Run(function () { return Promise.resolve(true); })
+        SafePromise_1.SafePromise.run(function () { return Promise.resolve(true); })
+            .then(function (data) {
+            expect(data).toBeDefined();
+            expect(data.isError).toBeFalsy();
+            expect(data.isSuccessful).toBeTruthy();
+            done();
+        })
+            .catch(function (error) {
+            fail(error);
+            done();
+        });
+        var testPromise = new Promise(function (response, reject) {
+            response(true);
+        });
+        SafePromise_1.SafePromise.run(testPromise)
+            .then(function (data) {
+            expect(data).toBeDefined();
+            expect(data.isError).toBeFalsy();
+            expect(data.isSuccessful).toBeTruthy();
+            done();
+        })
+            .catch(function (error) {
+            fail(error);
+            done();
+        });
+        SafePromise_1.SafePromise.run(Promise.resolve(true))
             .then(function (data) {
             expect(data).toBeDefined();
             expect(data.isError).toBeFalsy();
@@ -16,7 +41,7 @@ describe("SafePromise Tests", function () {
         });
     }, 15000);
     it("Test Failure", function (done) {
-        SafePromise_1.SafePromise.Run(function () { return Promise.reject("Some Rejection Reason"); })
+        SafePromise_1.SafePromise.run(function () { return Promise.reject("Some Rejection Reason"); })
             .then(function (data) {
             expect(data).toBeDefined();
             expect(data.isError).toBeTruthy();

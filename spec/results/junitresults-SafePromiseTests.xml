@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="0" tests="2" time="3">
- <testsuite name="SafePromise Tests" timestamp="2018-02-22T00:30:15" hostname="localhost" time="0.003" errors="0" tests="2" skipped="0" disabled="0" failures="0">
-  <testcase classname="SafePromise Tests" name="Test success" time="0.001" />
-  <testcase classname="SafePromise Tests" name="Test Failure" time="0.002" />
+<testsuites disabled="0" errors="0" failures="0" tests="2" time="45480">
+ <testsuite name="SafePromise Tests" timestamp="2018-02-22T01:21:25" hostname="localhost" time="45.48" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="SafePromise Tests" name="Test success" time="37.82" />
+  <testcase classname="SafePromise Tests" name="Test Failure" time="7.658" />
  </testsuite>
 </testsuites>

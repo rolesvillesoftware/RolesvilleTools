@@ -3,7 +3,7 @@ import { SafePromise } from "../src/SafePromise";
 describe("SafePromise Tests",() => {
 
     it("Test success", (done) => {
-        SafePromise.Run<boolean>(() => Promise.resolve(true))
+        SafePromise.run<boolean>(() => Promise.resolve(true))
         .then(data => {
             expect(data).toBeDefined(); 
             expect(data.isError).toBeFalsy(); 
@@ -15,10 +15,41 @@ describe("SafePromise Tests",() => {
             fail(error); 
             done(); 
         });
+
+        const testPromise = new Promise<boolean>((response, reject) => {
+            response(true); 
+        })
+
+        SafePromise.run<boolean>(testPromise)
+        .then(data => {
+            expect(data).toBeDefined(); 
+            expect(data.isError).toBeFalsy(); 
+            expect(data.isSuccessful).toBeTruthy(); 
+
+            done(); 
+        })
+        .catch(error => {
+            fail(error); 
+            done(); 
+        });
+
+        SafePromise.run<boolean>(Promise.resolve(true))
+        .then(data => {
+            expect(data).toBeDefined(); 
+            expect(data.isError).toBeFalsy(); 
+            expect(data.isSuccessful).toBeTruthy(); 
+
+            done(); 
+        })
+        .catch(error => {
+            fail(error); 
+            done(); 
+        });
+
     }, 15000);
 
     it("Test Failure", (done) => {
-        SafePromise.Run<boolean>(() => Promise.reject("Some Rejection Reason"))
+        SafePromise.run<boolean>(() => Promise.reject("Some Rejection Reason"))
             .then(data => {
                 expect(data).toBeDefined(); 
                 expect(data.isError).toBeTruthy(); 

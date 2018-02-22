@@ -25,7 +25,7 @@ SafePromise was designed to properly handle async and await in TypeScript and to
     
     describe("Test SafePromise", () => {
       it("Test Successful", done => {
-        SafePromise.Run(() => Promise.resolve(true))
+        SafePromise.run(() => Promise.resolve(true))
           .then(data => {
             expect(data.isError).toBeFalsy();
             expect(data.isSuccessful).toBeTruthy();
@@ -38,7 +38,7 @@ SafePromise was designed to properly handle async and await in TypeScript and to
       });
     
       it("Test Failure", done => {
-        SafePromise.Run(() => Promise.reject("some error")).then(data => {
+        SafePromise.run(() => Promise.reject("some error")).then(data => {
           expect(data.isError).toBeTruthy();
           expect(data.isSuccessful).toBeFalsy();
     
@@ -59,7 +59,7 @@ Using within TypeScript:
     export class SafePromiseExample {
     
         public async doSomething(promise: () => Promise<any>) {
-            var results = await SafePromise.Run(promise);
+            var results = await SafePromise.run(promise);
             if (results.isError) { throw new Error(results.error); }
             
             const result = results.value;
