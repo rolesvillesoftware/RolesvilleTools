@@ -13,4 +13,5 @@ gruntfile.js
 !*.d.ts
 dist/spec/*.d.ts
 karma.config.js
+karma.conf.js
 coverage/**/*
