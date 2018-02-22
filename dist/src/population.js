@@ -19,3 +19,4 @@ function population(array, field) {
     return retArray;
 }
 exports.population = population;
+//# sourceMappingURL=population.js.map

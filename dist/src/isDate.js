@@ -13,3 +13,4 @@ function isDate(date) {
     return work != null && work instanceof Date && !isNaN(work.valueOf());
 }
 exports.isDate = isDate;
+//# sourceMappingURL=isDate.js.map

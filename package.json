@@ -1,10 +1,10 @@
 {
-  "name": "rolesvilletools",
+  "name": "@rolesvillesoftware/tools",
   "version": "2.0.2",
   "description": "A tools set utilized by Rolesville Software LLC",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine-ts JASMINE_CONFIG_PATH=spec/support/jasmine.json"
   },
   "repository": {
     "type": "git",
@@ -23,24 +23,29 @@
   "homepage": "https://github.com/rolesvillesoftware/RolesvilleTools#readme",
   "dependencies": {},
   "devDependencies": {
-    "@types/jasmine": "^2.5.54",
-    "@types/lodash": "^4.14.74",
-    "browserify": "^14.4.0",
-    "jasmine": "^2.7.0",
-    "jasmine-core": "^2.7.0",
-    "jasmine-node": "^1.14.5",
-    "karma": "^1.7.0",
-    "karma-browserify": "^5.1.1",
+    "@types/jasmine": "^2.8.6",
+    "@types/lodash": "^4.14.104",
+    "@types/node": "^8.9.4",
+    "browserify": "^14.5.0",
+    "jasmine": "^2.99.0",
+    "jasmine-core": "^2.99.1",
+    "jasmine-reporters": "^2.3.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "jasmine-ts": "^0.2.1",
+    "jasmine-ts-console-reporter": "^3.1.1",
+    "karma": "^1.7.1",
+    "karma-browserify": "^5.2.0",
     "karma-chrome-launcher": "^2.2.0",
-    "karma-edge-launcher": "^0.4.1",
+    "karma-edge-launcher": "^0.4.2",
     "karma-ie-launcher": "^1.0.0",
-    "karma-jasmine": "^1.1.0",
+    "karma-jasmine": "^1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
     "karma-jasmine-matchers": "^3.7.0",
     "karma-requirejs": "^1.1.0",
-    "karma-typescript": "^3.0.5",
+    "karma-typescript": "^3.0.12",
     "requirejs": "^2.3.4",
-    "typescript": "^2.5.1",
-    "watchify": "^3.9.0"
+    "ts-node": "^5.0.0",
+    "typescript": "^2.7.2",
+    "watchify": "^3.10.0"
   }
 }

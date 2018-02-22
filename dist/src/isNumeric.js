@@ -4,3 +4,4 @@ function isNumeric(value) {
     return !isNaN(parseFloat(value)) && isFinite(value);
 }
 exports.isNumeric = isNumeric;
+//# sourceMappingURL=isNumeric.js.map

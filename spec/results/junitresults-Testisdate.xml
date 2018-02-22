@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites disabled="0" errors="0" failures="0" tests="5" time="73">
+ <testsuite name="Test isdate" timestamp="2018-02-22T00:30:15" hostname="localhost" time="0.073" errors="0" tests="5" skipped="0" disabled="0" failures="0">
+  <testcase classname="Test isdate" name="Passing new Date =&gt; true" time="0.07" />
+  <testcase classname="Test isdate" name="Passing string Date =&gt; true" time="0.001" />
+  <testcase classname="Test isdate" name="Test passing null =&gt; false" time="0" />
+  <testcase classname="Test isdate" name="Test passing zero length string =&gt; false" time="0" />
+  <testcase classname="Test isdate" name="Test passing invalid date" time="0" />
+ </testsuite>
+</testsuites>

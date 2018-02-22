@@ -12,3 +12,4 @@ function mean(items, field) {
     return sum / meanPopulation.length;
 }
 exports.mean = mean;
+//# sourceMappingURL=mean.js.map
