@@ -1,6 +1,6 @@
 {
   "name": "@rolesvillesoftware/tools",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "A tools set utilized by Rolesville Software LLC",
   "main": "index.js",
   "scripts": {
