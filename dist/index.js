@@ -12,4 +12,6 @@ var SafePromise_1 = require("./src/SafePromise");
 exports.SafePromise = SafePromise_1.SafePromise;
 var SafeResult_1 = require("./src/SafeResult");
 exports.SafeResult = SafeResult_1.SafeResult;
+var Exception_1 = require("./src/Exception");
+exports.Exception = Exception_1.Exception;
 //# sourceMappingURL=index.js.map

@@ -4,3 +4,4 @@ export { mean } from "./src/mean";
 export { population } from "./src/population";
 export { SafePromise } from "./src/SafePromise";
 export { SafeResult } from "./src/SafeResult";
+export { Exception } from "./src/Exception";
