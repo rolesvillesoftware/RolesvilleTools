@@ -1,1 +1,1 @@
-{"version":3,"file":"isNumeric.js","sourceRoot":"/home/bryan/projects/RolesvilleTools/src/","sources":["src/isNumeric.ts"],"names":[],"mappings":";;AAIA,mBAA0B,KAAU;IAChC,MAAM,CAAC,CAAC,KAAK,CAAC,UAAU,CAAC,KAAK,CAAC,CAAC,IAAI,QAAQ,CAAC,KAAK,CAAC,CAAC;AACxD,CAAC;AAFD,8BAEC"}
+{"version":3,"file":"isNumeric.js","sourceRoot":"/projects/RolesvilleTools/src/","sources":["src/isNumeric.ts"],"names":[],"mappings":";;AAIA,mBAA0B,KAAU;IAChC,MAAM,CAAC,CAAC,KAAK,CAAC,UAAU,CAAC,KAAK,CAAC,CAAC,IAAI,QAAQ,CAAC,KAAK,CAAC,CAAC;AACxD,CAAC;AAFD,8BAEC"}

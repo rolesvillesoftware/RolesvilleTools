@@ -28,5 +28,22 @@ describe("SafePromise Tests", function () {
             done();
         });
     }, 15000);
+    it("test a function promise", function (done) {
+        SafePromise_1.SafePromise.run(function () {
+            return new Promise(function (response, reject) {
+                response("hello world");
+            });
+        })
+            .then(function (data) {
+            expect(data.isError).toBeFalsy();
+            expect(data.isSuccessful).toBeTruthy();
+            expect(data.value).toEqual("hello world");
+            done();
+        })
+            .catch(function (error) {
+            fail(error);
+            done();
+        });
+    }, 30000);
 });
 //# sourceMappingURL=safePromise.spec.js.map

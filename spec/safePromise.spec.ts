@@ -31,4 +31,23 @@ describe("SafePromise Tests",() => {
                 done(); 
             });
     }, 15000);
+
+    it("test a function promise", (done) => {
+        SafePromise.run<string>(() => {
+            return new Promise<string>(
+                (response, reject) => {
+                    response("hello world"); 
+                });
+        })
+        .then(data => {
+            expect(data.isError).toBeFalsy(); 
+            expect(data.isSuccessful).toBeTruthy();
+            expect(data.value).toEqual("hello world"); 
+            done(); 
+        })
+        .catch(error => {
+            fail(error);
+            done();
+        });
+    }, 30000);
 });

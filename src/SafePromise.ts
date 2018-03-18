@@ -25,7 +25,6 @@ export class SafePromise {
       return Promise.reject("Promise must be in the form of a function for now.")
     }
   }
-
   /**
    * Handles the promise and the results
    *
