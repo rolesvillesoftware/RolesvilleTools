@@ -30,6 +30,11 @@ var Exception = (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(Exception.prototype, "error", {
+        get: function () { return new Error(this._message); },
+        enumerable: true,
+        configurable: true
+    });
     Exception.prototype.buildError = function (error) {
         this._message = error.message;
         this._stackTrace = error.stack;

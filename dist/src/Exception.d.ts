@@ -5,6 +5,7 @@ export declare class Exception {
     readonly message: string;
     readonly stackTrace: string;
     readonly innerException: Exception;
+    readonly error: Error;
     constructor(error: Error | Exception | string, innerException?: Error | string | Exception);
     buildError(error: Error): void;
     buildException(exception: Exception): void;

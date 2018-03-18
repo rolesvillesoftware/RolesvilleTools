@@ -6,6 +6,7 @@ export class Exception {
     get message(): string { return this._message; }
     get stackTrace(): string{ return this._stackTrace; }
     get innerException(): Exception { return this._innerException; }
+    get error(): Error { return  new Error(this._message); }
 
     constructor(error: Error | Exception | string, innerException?: Error | string | Exception) {
         if (error instanceof Error) {
