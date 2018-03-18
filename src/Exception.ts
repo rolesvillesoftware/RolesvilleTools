@@ -31,8 +31,6 @@ export class Exception {
         this._innerException = exception;
     }
     buildString(error: string) {
-        this._message = error;
-        this._stackTrace = null;
-        this._innerException = null;
+        this.buildError(new Error(error));
     }
 }

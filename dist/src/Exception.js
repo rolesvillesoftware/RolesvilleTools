@@ -41,9 +41,7 @@ var Exception = (function () {
         this._innerException = exception;
     };
     Exception.prototype.buildString = function (error) {
-        this._message = error;
-        this._stackTrace = null;
-        this._innerException = null;
+        this.buildError(new Error(error));
     };
     return Exception;
 }());
