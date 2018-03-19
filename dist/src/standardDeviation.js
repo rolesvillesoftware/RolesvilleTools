@@ -11,7 +11,7 @@ function standardDeviation(items, field) {
     var m = mean_1.mean(pop);
     var s = 0;
     pop.forEach(function (item) {
-        s += (item - m) ^ 2;
+        s += Math.pow(item - m, 2);
     });
     var d = s / (pop.length - 1);
     return Math.sqrt(d);

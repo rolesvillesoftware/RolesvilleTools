@@ -11,7 +11,7 @@ export function standardDeviation<T>(items: T[], field: string = null): number {
     let s = 0;
 
     pop.forEach(item => {
-        s += (item - m) ^ 2;
+        s += Math.pow(item - m,  2);
     });
 
     let d = s / (pop.length - 1);

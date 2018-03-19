@@ -7,8 +7,8 @@ function min(items, field) {
     if (meanPopulation == null || meanPopulation.length === 0) {
         return null;
     }
-    var minVal = 0;
-    meanPopulation.forEach(function (item) { return minVal = Math.min(minVal, item); });
+    var minVal = null;
+    meanPopulation.forEach(function (item) { return minVal = minVal == null ? item : Math.min(minVal, item); });
     return minVal;
 }
 exports.min = min;

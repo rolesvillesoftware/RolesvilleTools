@@ -7,8 +7,8 @@ function max(items, field) {
     if (meanPopulation == null || meanPopulation.length === 0) {
         return null;
     }
-    var maxVal = 0;
-    meanPopulation.forEach(function (item) { return maxVal = Math.max(maxVal, item); });
+    var maxVal = null;
+    meanPopulation.forEach(function (item) { return maxVal = maxVal == null ? item : Math.max(maxVal, item); });
     return maxVal;
 }
 exports.max = max;
