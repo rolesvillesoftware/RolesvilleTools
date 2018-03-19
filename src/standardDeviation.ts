@@ -1,7 +1,7 @@
 import { population } from "./population";
 import { mean } from "./mean";
 
-export function min<T>(items: T[], field: string = null): number {
+export function standardDeviation<T>(items: T[], field: string = null): number {
     let pop = population(items, field);
     if (pop == null || pop.length <= 1) {
         return 0;

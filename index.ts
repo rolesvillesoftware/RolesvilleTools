@@ -3,6 +3,7 @@ export { isNumeric } from "./src/isNumeric";
 export { mean } from "./src/mean";
 export { min } from "./src/min";
 export { max } from "./src/max";
+export { standardDeviation } from "./src/standardDeviation";
 
 export { population } from "./src/population";
 export { SafePromise } from "./src/SafePromise";
