@@ -1,1 +1,1 @@
-export declare function standardDeviation<T>(items: T[], field?: string): number;
+export declare function stdDev<T>(items: T[], field?: string): number;
